@@ -1,7 +1,7 @@
 
 # PDF to Podcast
 
-> ** Work in Progress** Actively in development. Some features may be incomplete or subject to change.
+> ** Work in Progress** Actively in development. Features are incomplete and may be subject to change.
 
 ## About
 
