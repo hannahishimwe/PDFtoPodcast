@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF → Podcast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@500;700;900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Turn PDF into a Podcast</h1>
+        </div>
+
+        <div class="upload-zone" id="uploadZone">
+            <div class="upload-icon">📄</div>
+            <div class="upload-text">Drop your PDF here or click to browse</div>
+            <div class="upload-subtext">Maximum file size: 10MB</div>
+            <input type="file" id="fileInput" class="file-input" accept=".pdf">
+        </div>
+
+        <div class="file-info" id="fileInfo">
+            <div class="file-icon">📄</div>
+            <div class="file-details">
+                <div class="file-name" id="fileName">document.pdf</div>
+                <div class="file-size" id="fileSize">2.4 MB</div>
+            </div>
+            <button class="remove-file" id="removeFile">×</button>
+        </div>
+
+        <div class="options">
+            <div class="option-group">
+                <label class="option-label" for="voiceSelect">Voice Style</label>
+                <div class="select-wrapper">
+                    <select id="voiceSelect">
+                        <option value="conversational">Conversational</option>
+                        <option value="professional">Professional</option>
+                        <option value="energetic">Energetic</option>
+                        <option value="calm">Calm & Soothing</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="option-group">
+                <label class="option-label" for="lengthSelect">Podcast Length</label>
+                <div class="select-wrapper">
+                    <select id="lengthSelect">
+                        <option value="short">Short (5-10 min)</option>
+                        <option value="medium" selected>Medium (10-20 min)</option>
+                        <option value="long">Long (20-30 min)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="option-group">
+                <label class="option-label" for="speedInput">Playback Speed</label>
+                <input type="number" id="speedInput" min="0.5" max="2" step="0.1" value="1.0">
+            </div>
+        </div>
+
+        <button class="generate-btn" id="generateBtn" disabled>
+            Generate Podcast
+        </button>
+
+        <div class="progress" id="progress">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">Processing your PDF...</div>
+        </div>
+
+        <div class="result" id="result">
+            <div class="result-icon">🎧</div>
+            <div class="result-text">Your podcast is ready!</div>
+            <a href="#" class="download-btn" id="downloadBtn">
+                <span>⬇</span>
+                <span>Download Audio</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const uploadZone = document.getElementById('uploadZone');
+        const fileInput = document.getElementById('fileInput');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileName = document.getElementById('fileName');
+        const fileSize = document.getElementById('fileSize');
+        const removeFile = document.getElementById('removeFile');
+        const generateBtn = document.getElementById('generateBtn');
+        const progress = document.getElementById('progress');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const result = document.getElementById('result');
+
+    </script>
+</body>
+
+</html>
